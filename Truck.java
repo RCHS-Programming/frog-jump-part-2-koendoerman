@@ -8,16 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Truck extends Actor
 {
-    /**
-     * Act - do whatever the Truck wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int speed;
+    
     public void act() 
     {
+        move(speed);
         move(-8);
         if(isAtEdge())
         {
             setLocation( 800, getY());
         }
-    }    
+    }  
+    
+    public Truck(int setSpeed)
+    {
+        speed = setSpeed;
+    }
 }
